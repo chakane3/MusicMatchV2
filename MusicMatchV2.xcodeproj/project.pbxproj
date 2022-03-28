@@ -19,6 +19,7 @@
 		94EE8ABB27F1F2CA004BB110 /* MusixMatchAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE8ABA27F1F2CA004BB110 /* MusixMatchAPIClient.swift */; };
 		94EE8ABD27F21CB4004BB110 /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE8ABC27F21CB4004BB110 /* ArtistModel.swift */; };
 		94EE8AC327F22009004BB110 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE8AC227F22009004BB110 /* Secrets.swift */; };
+		94EE8AC527F24B9D004BB110 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE8AC427F24B9D004BB110 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		94EE8ABA27F1F2CA004BB110 /* MusixMatchAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusixMatchAPIClient.swift; sourceTree = "<group>"; };
 		94EE8ABC27F21CB4004BB110 /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
 		94EE8AC227F22009004BB110 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		94EE8AC427F24B9D004BB110 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 		94EE8AB727F1EA96004BB110 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				94EE8AC427F24B9D004BB110 /* HomeView.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94EE8ABB27F1F2CA004BB110 /* MusixMatchAPIClient.swift in Sources */,
+				94EE8AC527F24B9D004BB110 /* HomeView.swift in Sources */,
 				94EE8AC327F22009004BB110 /* Secrets.swift in Sources */,
 				94EE8A8327F1E517004BB110 /* AppDelegate.swift in Sources */,
 				94EE8ABD27F21CB4004BB110 /* ArtistModel.swift in Sources */,
