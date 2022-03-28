@@ -17,6 +17,7 @@
 		94EE8AA627F1E51B004BB110 /* MusicMatchV2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE8AA527F1E51B004BB110 /* MusicMatchV2UITestsLaunchTests.swift */; };
 		94EE8AB927F1EB1A004BB110 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE8AB827F1EB1A004BB110 /* NetworkRequest.swift */; };
 		94EE8ABB27F1F2CA004BB110 /* MusixMatchAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE8ABA27F1F2CA004BB110 /* MusixMatchAPIClient.swift */; };
+		94EE8ABD27F21CB4004BB110 /* ArtistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE8ABC27F21CB4004BB110 /* ArtistModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		94EE8AA527F1E51B004BB110 /* MusicMatchV2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMatchV2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		94EE8AB827F1EB1A004BB110 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		94EE8ABA27F1F2CA004BB110 /* MusixMatchAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusixMatchAPIClient.swift; sourceTree = "<group>"; };
+		94EE8ABC27F21CB4004BB110 /* ArtistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		94EE8AB427F1EA2E004BB110 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				94EE8ABC27F21CB4004BB110 /* ArtistModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				94EE8ABB27F1F2CA004BB110 /* MusixMatchAPIClient.swift in Sources */,
 				94EE8A8327F1E517004BB110 /* AppDelegate.swift in Sources */,
+				94EE8ABD27F21CB4004BB110 /* ArtistModel.swift in Sources */,
 				94EE8AB927F1EB1A004BB110 /* NetworkRequest.swift in Sources */,
 				94EE8A8527F1E517004BB110 /* SceneDelegate.swift in Sources */,
 			);
