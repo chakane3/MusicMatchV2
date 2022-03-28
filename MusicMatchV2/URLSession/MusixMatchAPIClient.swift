@@ -8,7 +8,7 @@
 import Foundation
 
 struct MusixMatchAPIClient {
-    static func fetchArtist(for artistName: String, completion: @escaping (Result<>) -> ()) {
-        
-    }
+//    static func fetchArtist(for artistName: String, completion: @escaping (Result<>) -> ()) {
+//        
+//    }
 }
