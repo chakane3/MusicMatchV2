@@ -29,3 +29,5 @@ struct ArtistInfo: Codable {
     let artist_country: String
     let artist_rating: Int
 }
+
+
