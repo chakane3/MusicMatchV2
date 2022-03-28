@@ -8,5 +8,5 @@
 import Foundation
 
 struct SecretAPIKey {
-    static let secreyKey = "2fbda91b968f88ccfdef5cc773dcc57d"
+    static let secretKey = "2fbda91b968f88ccfdef5cc773dcc57d"
 }
