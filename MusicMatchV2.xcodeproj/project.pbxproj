@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94AAC4D027F8D02A00482D31 /* ArtistSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAC4CF27F8D02A00482D31 /* ArtistSearch.swift */; };
 		94EE8A8327F1E517004BB110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE8A8227F1E517004BB110 /* AppDelegate.swift */; };
 		94EE8A8527F1E517004BB110 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EE8A8427F1E517004BB110 /* SceneDelegate.swift */; };
 		94EE8A8A27F1E517004BB110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EE8A8827F1E517004BB110 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94AAC4CF27F8D02A00482D31 /* ArtistSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearch.swift; sourceTree = "<group>"; };
 		94EE8A7F27F1E517004BB110 /* MusicMatchV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicMatchV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EE8A8227F1E517004BB110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EE8A8427F1E517004BB110 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				94EE8AC427F24B9D004BB110 /* HomeView.swift */,
+				94AAC4CF27F8D02A00482D31 /* ArtistSearch.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			files = (
 				94EE8ABB27F1F2CA004BB110 /* MusixMatchAPIClient.swift in Sources */,
 				94EE8AC527F24B9D004BB110 /* HomeView.swift in Sources */,
+				94AAC4D027F8D02A00482D31 /* ArtistSearch.swift in Sources */,
 				94EE8AC327F22009004BB110 /* Secrets.swift in Sources */,
 				94EE8A8327F1E517004BB110 /* AppDelegate.swift in Sources */,
 				94EE8ABD27F21CB4004BB110 /* ArtistModel.swift in Sources */,

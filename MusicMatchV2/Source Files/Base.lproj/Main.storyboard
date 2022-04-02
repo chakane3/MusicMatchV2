@@ -44,7 +44,7 @@
         <!--Artist Search-->
         <scene sceneID="HHJ-C3-Qtx">
             <objects>
-                <viewController title="Artist Search" id="Qha-uU-y6U" sceneMemberID="viewController">
+                <viewController title="Artist Search" id="Qha-uU-y6U" customClass="ArtistSearch" customModule="MusicMatchV2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KGg-Pi-af3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,7 @@
                                 <rect key="frame" x="0.0" y="139" width="414" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="LNd-7d-xwA" rowHeight="69" style="IBUITableViewCellStyleDefault" id="eAi-ch-RPT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="artistCell" textLabel="LNd-7d-xwA" rowHeight="69" style="IBUITableViewCellStyleDefault" id="eAi-ch-RPT">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eAi-ch-RPT" id="Jx3-Sj-bhD">
@@ -93,6 +93,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zpA-hP-ofC"/>
+                    <connections>
+                        <outlet property="searchBar" destination="upr-yj-mxs" id="3Jd-tT-Irg"/>
+                        <outlet property="tableView" destination="wUb-la-rZp" id="aTK-lB-Cpg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eda-Xr-mAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
