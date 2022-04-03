@@ -10,6 +10,7 @@ import Foundation
 struct MusixMatchAPIClient {
     static func fetchArtist(for artistName: String, completion: @escaping (Result<[Artist], NetworkError>) -> ()) {
         // create a URLRequest object from our endpoint
+        let artistName = artistName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "nil"
         let endpointURLString = "http://api.musixmatch.com/ws/1.1/artist.search?q_artist=\(artistName)&page_size=15&apikey=\(Secrets.apiKey)"
         guard let url = URL(string: endpointURLString) else {
             completion(.failure(.badURL(endpointURLString)))
