@@ -90,8 +90,106 @@ class MusicMatchV2Tests: XCTestCase {
         } catch {
             XCTFail("decoding error: \(error)")
         }
-        
-        
     }
     
+    func testGetAlbumByArtistID() {
+        // arrange
+        let json = """
+{
+    "message": {
+        "header": {
+            "status_code": 200,
+            "execute_time": 0.017961978912354,
+            "available": 71
+        },
+        "body": {
+            "album_list": [
+                {
+                    "album": {
+                        "album_id": 37484781,
+                        "album_mbid": "",
+                        "album_name": "Toosie Slide - Single",
+                        "album_rating": 100,
+                        "album_release_date": "2020-04-03",
+                        "artist_id": 33491453,
+                        "artist_name": "Drake",
+                        "primary_genres": {
+                            "music_genre_list": [
+                                {
+                                    "music_genre": {
+                                        "music_genre_id": 34,
+                                        "music_genre_parent_id": 0,
+                                        "music_genre_name": "Music",
+                                        "music_genre_name_extended": "Music",
+                                        "music_genre_vanity": "Music"
+                                    }
+                                }
+                            ]
+                        },
+                        "album_pline": "℗ 2020 OVO, under exclusive license to Republic Records, a division of UMG Recordings, Inc.",
+                        "album_copyright": "℗ 2020 OVO, under exclusive license to Republic Records, a division of UMG Recordings, Inc.",
+                        "album_label": "OVO",
+                        "restricted": 0,
+                        "updated_time": "2020-04-17T09:57:04Z",
+                        "external_ids": {
+                            "spotify": [
+                                "4VQUnP3QFjxWLCR86NlV8p"
+                            ],
+                            "itunes": [
+                                "1505950451"
+                            ],
+                            "amazon_music": []
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+""".data(using: .utf8)!
+        
+        
+        struct Start: Codable {
+            let message: ArtistAlbums
+        }
+        
+        struct ArtistAlbums: Codable {
+            let body: Albums
+        }
+        
+        struct Albums: Codable {
+            let album_list: AlbumDetails
+        }
+        
+        struct AlbumDetails: Codable {
+            let album: Album
+        }
+        
+        struct Album: Codable {
+            let album_id: Int
+            let album_name: String
+            let album_rating: Int
+            let album_release_date: String
+            let artist_name: String
+            let primary_genres: MusicGenre
+        }
+        
+        struct MusicGenre: Codable {
+            let music_genre: GenreDetails
+        }
+        
+        struct GenreDetails: Codable {
+            let music_genre_id: Int
+        }
+        
+        let assertedGenreID = 34
+        do {
+            let decodedGenreID = try JSONDecoder().decode(Start.self, from: json)
+            let genreID = decodedGenreID.message.body.album_list.album.primary_genres.music_genre.music_genre_id
+            XCTAssertEqual(assertedGenreID, genreID)
+            
+        } catch {
+            XCTFail("decoding error: \(error)")
+        }
+    }
 }

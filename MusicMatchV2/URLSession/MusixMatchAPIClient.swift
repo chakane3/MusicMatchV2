@@ -32,6 +32,7 @@ struct MusixMatchAPIClient {
                 }
             }
         }
-        
     }
+    
+//    static func fetchArtistAlbums(for artistID: Int, completion: @escaping (Result<[Artist]))
 }
