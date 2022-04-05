@@ -158,7 +158,7 @@ class MusicMatchV2Tests: XCTestCase {
         }
         
         struct Albums: Codable {
-            let album_list: AlbumDetails
+            let album_list: [AlbumDetails]
         }
         
         struct AlbumDetails: Codable {
@@ -171,22 +171,16 @@ class MusicMatchV2Tests: XCTestCase {
             let album_rating: Int
             let album_release_date: String
             let artist_name: String
-            let primary_genres: MusicGenre
         }
-        
-        struct MusicGenre: Codable {
-            let music_genre: GenreDetails
-        }
-        
-        struct GenreDetails: Codable {
-            let music_genre_id: Int
-        }
+     
         
         let assertedGenreID = 34
+        let artistName = "Drake"
         do {
             let decodedGenreID = try JSONDecoder().decode(Start.self, from: json)
-            let genreID = decodedGenreID.message.body.album_list.album.primary_genres.music_genre.music_genre_id
-            XCTAssertEqual(assertedGenreID, genreID)
+            let genreID = decodedGenreID.message.body.album_list.first?.album.artist_name ?? ""
+            print(genreID)
+            XCTAssertEqual(artistName, genreID)
             
         } catch {
             XCTFail("decoding error: \(error)")
