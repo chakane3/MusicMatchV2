@@ -34,5 +34,27 @@ struct MusixMatchAPIClient {
         }
     }
     
-//    static func fetchArtistAlbums(for artistID: Int, completion: @escaping (Result<[Artist]))
+    static func fetchArtistAlbums(for artistID: Int, completion: @escaping (Result<Album, NetworkError>) -> ()) {
+        let endpointURLString = "http://api.musixmatch.com/ws/1.1/artist.albums.get?artist_id=\(artistID)&s_release_date=desc&apikey=\(Secrets.apiKey)d&page=2"
+        guard let url = URL(string: endpointURLString) else {
+            completion(.failure(.badURL(endpointURLString)))
+            return
+        }
+        let request = URLRequest(url: url)
+        
+        NetworkRequest.shared.performDataTask(with: request) { (result) in
+            switch result {
+            case .failure(let networkError):
+                completion(.failure(.networkClientError(networkError)))
+            case .success(let data):
+                do {
+                    let albums = try JSONDecoder().decode(AlbumDetails.self, from: data)
+                    completion(.success(albums.album))
+                } catch {
+                    
+                }
+                
+            }
+        }
+    }
 }

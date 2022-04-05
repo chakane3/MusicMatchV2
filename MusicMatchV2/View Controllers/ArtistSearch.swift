@@ -35,7 +35,6 @@ class ArtistSearch: UIViewController {
                 print("error: \(err)")
                 
             case .success(let data):
-                dump(data)
                 self.artistData = data
             }
         }
